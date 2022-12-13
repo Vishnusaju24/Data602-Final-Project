@@ -23,7 +23,7 @@ left_column, right_column = st.columns(2)
 with left_column:
    #'Numerical Plot'
     num_feat = st.selectbox(
-   'Select Numerical Feature', df.select_dtypes('number').columns)
+   'Select Price Trend', df.select_dtypes('number').columns)
     fig = px.scatter(df, x="Date", y=num_feat, title='Flight Cost Trend',color="Date")
 st.plotly_chart(fig, use_container_width=True)
 with right_column:
